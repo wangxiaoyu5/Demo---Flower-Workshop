@@ -10,6 +10,27 @@
     "miniprogram": {
       "list": [
         {
+          "name": "提交订单",
+          "pathName": "modules/orderPayModule/pages/order/detail/detail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/cart/cart",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "modules/goodModule/pages/goods/detail/detail",
+          "query": "goodsId=7",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "收货地址列表",
           "pathName": "modules/settingModule/pages/address/list/index",
           "query": "",

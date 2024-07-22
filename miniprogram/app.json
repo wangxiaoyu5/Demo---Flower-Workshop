@@ -4,10 +4,6 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/my/my",
-    "pages/goods/list/list",
-    "pages/goods/detail/detail",
-    "pages/order/detail/detail",
-    "pages/order/list/list",
 
     "pages/login/login",
     "pages/settings/settings",
@@ -81,12 +77,30 @@
         "pages/address/list/index",
         "pages/profile/profile"
       ]
+    },
+    {
+      "root": "modules/goodModule",
+      "name": "goodModule",
+      "pages": ["pages/goods/list/list", "pages/goods/detail/detail"]
+    },
+    {
+      "root": "modules/orderPayModule",
+      "name": "orderPayModule",
+      "pages": ["pages/order/detail/detail", "pages/order/list/list"]
     }
   ],
   "preloadRule": {
     "pages/settings/settings": {
       "network": "all",
       "packages": ["settingModule"]
+    },
+    "pages/category/category": {
+      "network": "all",
+      "packages": ["goodModule"]
+    },
+    "pages/cart/cart": {
+      "network": "all",
+      "packages": ["orderPayModule"]
     }
   },
   "requiredPrivateInfos": ["getLocation", "chooseLocation"],
@@ -94,5 +108,8 @@
     "scope.userLocation": {
       "desc": "获取用户位置信息用于填写收货地址"
     }
+  },
+  "resolveAlias": {
+    "@/*": "/*"
   }
 }

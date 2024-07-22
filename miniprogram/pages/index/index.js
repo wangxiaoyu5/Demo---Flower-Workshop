@@ -33,5 +33,9 @@ Page({
   onLoad() {
     // 调用获取首页数据的回调
     this.getIndexData()
-  }
+  },
+  // 转发功能，转发给好友、群聊
+  onShareAppMessage() {},
+  // 能够把小程序分享到朋友圈
+  onShareTimeline() {}
 })

@@ -8,6 +8,14 @@ import {
   asyncSetStorage
 } from './utils/storage'
 App({
+  // globaldata 是指全局共享的数据
+  //点击收货地址时，需要将点击的收货地址赋伯给address
+  //在结算支付、订单结算页面，需要判断 address 是否存在数据
+  //如果存在数据，就展示 hddress 数据，如果没有数据，就从接口获取数据进行渲染
+  globalData: {
+    address: {}
+  },
+
   async onShow() {
     // wx.showToast({
     //   title: 'title',

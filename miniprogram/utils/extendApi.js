@@ -5,7 +5,12 @@
  * @param {Object} options 参数和wx.shoeToast参数保持一致
  */
 
-const toast = ({ title = '数据加载中...', icon = 'none', duration = 2000, mask = true } = {}) => {
+const toast = ({
+  title = '数据加载中...',
+  icon = 'none',
+  duration = 2000,
+  mask = true
+} = {}) => {
   wx.showToast({
     title,
     icon,
@@ -37,8 +42,8 @@ const modal = (options = {}) => {
       // 将合并的参数赋值传递给 showModal 方法
       ...opts,
       complete({ confirm, cancel }) {
-        confirm && console.log('点击了确定')
-        cancel && console.log('点击了取消')
+        confirm && console.log('true')
+        cancel && console.log('false')
       }
     })
   })

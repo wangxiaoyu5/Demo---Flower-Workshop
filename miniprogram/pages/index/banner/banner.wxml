@@ -18,7 +18,7 @@
         <!-- 通过 navigator 组件跳转的链接 -->
         <navigator
           class="navigator"
-          url="/pages/goods/detail/detail?goodsId={{item.id}}"
+          url="/modules/goodModule/pages/goods/detail/detail?goodsId={{item.id}}"
         >
           <image class="img" src="{{ item.imageUrl }}"></image>
         </navigator>
